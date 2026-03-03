@@ -1,0 +1,184 @@
+/* ===============================
+   LIFE-OS TYPOGRAPHY SYSTEM
+   Structured • Intentional • OS-like
+================================= */
+
+:root {
+  /* Background */
+  --bg: linear-gradient(
+    135deg,
+    #eef2f7 0%,
+    #f8fafc 50%,
+    #eef2f7 100%
+  );
+
+  /* Text */
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-muted: #64748b;
+
+  /* Accents */
+  --accent-projects: #0f766e;
+  --accent-rocks: #2563eb;
+  --accent-logs: #ea580c;
+  --accent-system: #475569;
+
+  /* Elevation */
+  --elevation-1: 0 4px 10px rgba(0,0,0,0.03);
+  --elevation-2: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+/* ===============================
+   BASE RESET
+================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  letter-spacing: -0.15px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===============================
+   TYPOGRAPHY SCALE
+================================= */
+
+/* PRIMARY PAGE TITLE */
+h1 {
+  font-size: 48px;
+  font-weight: 600;
+  letter-spacing: -1.2px;
+  margin: 0 0 32px 0;
+  text-transform: lowercase;
+}
+
+/* SECTION HEADERS */
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  margin: 0 0 18px 0;
+  text-transform: lowercase;
+}
+
+/* TILE HEADERS */
+h3 {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  margin: 0;
+}
+
+/* PARAGRAPH */
+p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0 0 16px 0;
+}
+
+/* SMALL LABELS */
+label,
+.meta,
+.label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* VALUE EMPHASIS */
+.value {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  color: var(--text-primary);
+}
+
+/* SECONDARY NUMBERS */
+.metric .value {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ===============================
+   BUTTONS
+================================= */
+
+button {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  border-radius: 6px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: all 120ms ease;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* ===============================
+   INPUTS
+================================= */
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  background: rgba(255,255,255,0.8);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent-projects);
+}
+
+/* ===============================
+   LINKS
+================================= */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+/* ===============================
+   UTILITY
+================================= */
+
+.empty {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.back {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  color: var(--text-secondary);
+}
